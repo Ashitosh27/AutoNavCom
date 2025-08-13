@@ -4,9 +4,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ch.qos.logback.core.model.Model;
+import com.AutoNavCom.AutoNavCom.model.User;
 
-@RestController
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
 @RequestMapping("/home")
 public class UserController {
 	
@@ -14,8 +17,9 @@ public class UserController {
 	@GetMapping("/homepage")
 	public String Homepage(Model model) {
 		
+		model.addAttribute("user", new User());
 		
-		return "I love Myself";
+		return "user";
 	}
 
 }
