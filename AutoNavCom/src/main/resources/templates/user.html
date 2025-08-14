@@ -35,10 +35,17 @@
     <div class="row justify-content-center">
         <div class="col-md-6 col-lg-5">
             <div class="card p-4">
+				
+				<div th:if="${responseSuccess} != null"
+							class="alert alert-success scs mt-3" th:text="${responseSuccess}"></div>
+				<div th:if="${responseFailed} != null"
+							class="alert alert-danger dngr mt-3" th:text="${responseFailed}"></div>
+				
+				
                 <h3 class="text-center mb-4 text-primary">User Registration</h3>
                 
                 <!-- Thymeleaf form -->
-                <form th:action="@{/register}" th:object="${user}" method="post">
+                <form th:action="@{/home/user_registration}" th:object="${user}" method="post">
                     
                     <!-- User ID -->
                     <div class="mb-3">
