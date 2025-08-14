@@ -13,6 +13,7 @@ import com.AutoNavCom.AutoNavCom.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.System.Logger;
+import java.net.http.HttpClient.Redirect;
 
 import org.apache.juli.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +54,7 @@ public class UserController {
        model.addAttribute("user", new User()); // Clear the form
           
        
-       return "user"; // Reload the form page
+       return "redirect:/home/homepage"; // Reload the form page
 		
 		
 	}
