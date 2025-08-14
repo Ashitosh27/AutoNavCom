@@ -42,21 +42,21 @@
 							class="alert alert-danger dngr mt-3" th:text="${responseFailed}"></div>
 				
 				
-                <h3 class="text-center mb-4 text-primary">User Registration</h3>
+                <h3 class="text-center mb-4 text-primary">Vendor Registration</h3>
                 
                 <!-- Thymeleaf form -->
-                <form th:action="@{/home/user_registration}" th:object="${user}" method="post">
+                <form th:action="@{/vendor/addvendor}" th:object="${vendor}" method="post">
                     
                     <!-- User ID -->
                     <div class="mb-3">
-                        <label for="userId" class="form-label">User ID</label>
-                        <input type="number" th:field="*{userId}" class="form-control" id="userId" placeholder="Enter User ID" required>
+                        <label for="vendorId" class="form-label">Vendor ID</label>
+                        <input type="number" th:field="*{vendorId}" class="form-control" id="vendorId" placeholder="Enter Vendor ID" required>
                     </div>
 
                     <!-- User Name -->
                     <div class="mb-3">
-                        <label for="userName" class="form-label">User Name</label>
-                        <input type="text" th:field="*{userName}" class="form-control" id="userName" placeholder="Enter full name" maxlength="100" required>
+                        <label for="vendorName" class="form-label">Vendor Name</label>
+                        <input type="text" th:field="*{vendorName}" class="form-control" id="vendorName" placeholder="Enter Vendor name" maxlength="100" required>
                     </div>
 
                     <!-- Mobile Number -->
